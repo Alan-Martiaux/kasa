@@ -1,0 +1,25 @@
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .img_banner {
+
+        object-fit: cover;
+        height: 223px ;
+        border-radius: 25px;
+        width: 1240px;
+        gap: 15px;
+        filter: brightness(60%);
+       
+    
+    }
+
+    .banner_txt {
+        position: fixed;
+        font-size: 48px;
+        color: $whiteColor;
+        font-family: 'Montserrat', sans-serif;
+    }
+   
+}
