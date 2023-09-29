@@ -10,8 +10,7 @@ header .img_logo {
   height: 68px;
   width: 210px;
 }
-
-.nav_bar {
+header .nav_bar {
   display: flex;
   justify-content: center;
   align-items: center;

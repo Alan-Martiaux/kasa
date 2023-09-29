@@ -1,17 +1,10 @@
-import banner_img from "../../asset/banner.png"
+function Banner({ image, text }) {
+  return (
+    <div className="banner">
+      <img className="img_banner" src={image} alt="Banniere" />
+      {text && <p className="banner_txt">{text}</p>}
+    </div>
+  );
+}
 
-function Imgbanner() {
-    return (
-      <div className="banner">
-     
-       <img
-        className="img_banner"
-        src= {banner_img}
-        alt="Banniere"
-      />
-      <p className="banner_txt">Chez vous, partout ailleurs</p>
-      </div>
-    )
-  }
-  
-  export default Imgbanner
+export default Banner;

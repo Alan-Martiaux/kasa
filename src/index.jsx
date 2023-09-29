@@ -1,24 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Gallery from "./components/Gallery/gallery";
+import Home from "./views/Home/home";
 import Header from "./components/Header/header";
 import Footer from "./components/Footer/Footer";
-import Imgbanner from "./components/banner/banner";
+import Propos from "./views/A_Propos/propos";
+import Error from "./views/Error/error";
 import "./sass/style.css";
-
 
 ReactDOM.render(
   <React.StrictMode>
-    
-
     <Router>
-      
-
       <Header />
-      <Imgbanner/>
-      <Gallery/>
-      <Footer/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/propos" element={<Propos />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+      <Footer />
     </Router>
   </React.StrictMode>,
   document.getElementById("root")
