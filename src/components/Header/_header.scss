@@ -4,18 +4,31 @@ header {
     align-items: center;
     margin-top: 15px;
     padding-bottom: 15px;
+    
 
     .img_logo {
     height: 68px;
     width: 210px;
     }
     
-    .nav_bar {
+    nav {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 50px;
-        font-size: 24px;
+        
+
+        a {
+            color: $mainColor;
+            text-decoration: none;
+            font-size: 24px;
+
+            
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
     
     }
 }

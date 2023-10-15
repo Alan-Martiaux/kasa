@@ -1,0 +1,50 @@
+const [slide, setslide] = useState(0);
+
+  const slideLength = sliders.length;
+  console.log(slideLength - 1);
+
+  const nextSlide = () => {
+    if (slideLength <= 6) {
+      setslide(slide === 5);
+      console.log(slideLength);
+    }
+    //  setslide(slide === slideLength - 1 ? 0 : setslide + 1);
+  };
+
+  const prevSlide = () => {
+    setslide(slide === 0 ? slideLength - 1 : setslide - 1);
+  };
+  if (!Array.isArray(sliders) || slideLength <= 0) {
+    return null;
+  }
+  return (
+    <div className="Slider">
+      {sliders.map((pictures, index) => {
+        return (
+          <div
+            key={index}
+            className={
+              index === slide
+                ? "slide slider__active-picture"
+                : "slide slider__inactive-picture"
+            }
+          >
+            {index === slide && <img src={pictures} alt="" className="11" />}
+          </div>
+        );
+      })}
+
+      {slideLength > 1 ? (
+        <>
+          <div className="slider__next" onClick={nextSlide}>
+            <i className="rightArrow">{LeftArrow}</i>
+          </div>
+          <div className="slider__previous" onClick={prevSlide}>
+            <i className="rightArrow">{RightArrow}</i>
+          </div>
+        </>
+      ) : (
+        <h1>Non</h1>
+      )}
+    </div>
+  );

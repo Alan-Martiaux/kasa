@@ -1,0 +1,24 @@
+.about_collapses {
+  width: 60%;
+}
+.collapse_header {
+  background-color: $mainColor;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  color: $whiteColor;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.collapse_content {
+  background-color: $graybackground;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  color: $mainColor;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  padding: 20px 10px;
+}

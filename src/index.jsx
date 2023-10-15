@@ -6,6 +6,7 @@ import Header from "./components/Header/header";
 import Footer from "./components/Footer/Footer";
 import Propos from "./views/A_Propos/propos";
 import Error from "./views/Error/error";
+import Logements from "./views/FicheLogement/logement";
 import "./sass/style.css";
 
 ReactDOM.render(
@@ -16,6 +17,7 @@ ReactDOM.render(
         <Route path="/" element={<Home />} />
         <Route path="/propos" element={<Propos />} />
         <Route path="*" element={<Error />} />
+        <Route path="/logement/:id" element={<Logements />} />
       </Routes>
       <Footer />
     </Router>
