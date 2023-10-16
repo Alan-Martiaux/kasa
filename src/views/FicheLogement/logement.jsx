@@ -10,38 +10,73 @@ import Slider from "../../components/slider/slider";
 
 function Logements() {
   const { id } = useParams();
-  const LocationID = ArrayLogements.find((location) => location.id === id);
+  const LogLoc = ArrayLogements.find((location) => location.id === id);
 
-  const { equipments, tags, pictures } = LocationID;
+  const {
+    equipments,
+    tags,
+    pictures,
+    location,
+    title,
+    rating,
+    description,
+    host,
+  } = LogLoc;
 
-  console.log(LocationID, equipments, pictures);
+  console.log(
+    LogLoc,
+    equipments,
+    pictures,
+    location,
+    title,
+    rating,
+    description,
+    host
+  );
 
   return (
     <div className="ficheLogement">
-      <h1>{LocationID.title}</h1>
       <Slider slides={pictures} />
+      <section className="ficheLogement__PartOne">
+        <div className="titleandLocation">
+          <h1>{title}</h1>
+          <h3>{location}</h3>
+          <div className="Tag">
+            {tags.map((tag) => (
+              <Tag className="TagItem" nom={tag} />
+            ))}
+          </div>
+        </div>
+        <div className="hostandRating">
+          <div className="host">
+            <p>{host.name} </p> <img src={host.picture} alt={host.name} />{" "}
+          </div>
+          <div className="Rating">
+            <Star Rate={rating} />
+          </div>
+        </div>
+      </section>
 
-      <div className="Tag">
-        {tags.map((tag) => (
-          <Tag nom={tag} />
-        ))}
-      </div>
-      <Collapse title="Description" content={LocationID.description} />
-      <div className="Rating">
-        <Star Rate={LocationID.rating} />
-      </div>
-      <Collapse
-        title="Equipements"
-        content={equipments.map((equip) => (
-          <article className="Equipement">
-            <ul className="EquipemetTitle">
-              <li>
-                <Equip nom={equip} />
-              </li>
-            </ul>
-          </article>
-        ))}
-      />
+      <section className="ficheLogement__PartTwo">
+        <Collapse
+          className="collapse"
+          title="Description"
+          content={description}
+        />
+        <Collapse
+          className="collapse"
+          title="Equipements"
+          content={equipments.map((equip) => (
+            <article className="Equipement">
+              <ul className="EquipemetTitle">
+                <li>
+                  <Equip nom={equip} />
+                </li>
+              </ul>
+            </article>
+          ))}
+        />
+      </section>
     </div>
   );
 }

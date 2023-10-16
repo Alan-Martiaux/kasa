@@ -14,7 +14,7 @@ const Collapse = (props) => {
   };
 
   return (
-    <>
+    <section className="collapse">
       <div
         onClick={openTabHandler}
         className="collapse_header"
@@ -30,7 +30,7 @@ const Collapse = (props) => {
         )}
       </div>
       {openTab && <div className="collapse_content">{props.content}</div>}
-    </>
+    </section>
   );
 };
 
