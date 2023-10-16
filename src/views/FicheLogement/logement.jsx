@@ -8,10 +8,15 @@ import Equip from "../../components/Equipements/Equipements";
 import Star from "../../components/Star/Star";
 import Slider from "../../components/slider/slider";
 
+import Error from "../Error/error";
+
 function Logements() {
   const { id } = useParams();
   const LogLoc = ArrayLogements.find((location) => location.id === id);
 
+  if (!LogLoc) {
+    return <Error />;
+  }
   const {
     equipments,
     tags,
@@ -22,17 +27,6 @@ function Logements() {
     description,
     host,
   } = LogLoc;
-
-  console.log(
-    LogLoc,
-    equipments,
-    pictures,
-    location,
-    title,
-    rating,
-    description,
-    host
-  );
 
   return (
     <div className="ficheLogement">
