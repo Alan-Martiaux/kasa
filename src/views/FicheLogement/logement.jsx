@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import ArrayLogements from "../../data/location.json";
 import Collapse from "../../components/Collapse/Collapse";
 import Tag from "../../components/Tag/Tag";
@@ -8,15 +8,16 @@ import Equip from "../../components/Equipements/Equipements";
 import Star from "../../components/Star/Star";
 import Slider from "../../components/slider/slider";
 
-import Error from "../Error/error";
-
 function Logements() {
   const { id } = useParams();
   const LogLoc = ArrayLogements.find((location) => location.id === id);
 
   if (!LogLoc) {
-    return <Error />;
+    return <Navigate to="/Error" />;
   }
+
+  document.title = `KASA -> ${LogLoc.title}`;
+
   const {
     equipments,
     tags,

@@ -1,11 +1,14 @@
 .about_collapses {
-  width: 60%;
+  width: 100%;
+  max-width: 1023px;
+  padding: 0 20px;
 }
 .collapse_header {
   background-color: $mainColor;
   display: flex;
   justify-content: space-between;
   margin-top: 25px;
+
   border-radius: 10px;
   font-family: "Montserrat", sans-serif;
   color: $whiteColor;
@@ -14,11 +17,27 @@
 }
 
 .collapse_content {
+  z-index: -1;
   background-color: $graybackground;
+  position: relative;
   margin-bottom: 25px;
+
   border-radius: 5px;
   color: $mainColor;
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
   padding: 20px 10px;
+  animation: slide 300ms ease-in;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(-60px);
+    margin-bottom: 0px;
+  }
+
+  100% {
+    transform: translateY(0px);
+    margin-bottom: 25px;
+  }
 }

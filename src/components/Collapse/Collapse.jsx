@@ -15,16 +15,10 @@ const Collapse = (props) => {
 
   return (
     <section className="collapse">
-      <div
-        onClick={openTabHandler}
-        className="collapse_header"
-        style={{ transform: `translateX(-{30}px)` }}
-      >
+      <div onClick={openTabHandler} className="collapse_header">
         <h2 className="collapse_header_title">{props.title}</h2>
         {!openTab ? (
-          <i className="collapse_header_icon fa-solid fa-chevron-down">
-            {down}
-          </i>
+          <i className="collapse_header_icon ">{down}</i>
         ) : (
           <i className="collapse_header_icon">{up}</i>
         )}

@@ -1,16 +1,46 @@
 .error {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: $mainColor;
-    font-size: 36px;
-    padding-top: 100px;
-    gap: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $mainColor;
+  font-size: 36px;
+  padding-top: 100px;
+  gap: 70px;
 
-    .error_link {
-        color: $mainColor;
-        font-size: 18px;
-        padding-bottom: 150px;
+  h1 {
+    font-size: 288px;
+    margin: 0;
+  }
+  .error_link {
+    color: $mainColor;
+    font-size: 18px;
+    padding-bottom: 150px;
+  }
+}
+.responsive {
+  display: none;
+  flex-direction: column;
+}
+.desktop {
+  display: block;
+  text-align: center;
+}
+@media (max-width: 576px) {
+  .error {
+    h1 {
+      font-size: 96px;
     }
+  }
+  .desktop {
+    display: none;
+  }
+  .responsive {
+    display: block;
+    text-align: center;
+    p {
+      margin: auto;
+      font-size: 18px;
+    }
+  }
 }

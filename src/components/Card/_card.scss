@@ -46,3 +46,10 @@ a {
   text-overflow: ellipsis;
   position: relative;
 }
+
+@media (min-width: 576px) {
+  .Card {
+    height: 255px;
+    width: 335px;
+  }
+}

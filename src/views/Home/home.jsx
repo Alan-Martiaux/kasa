@@ -9,7 +9,7 @@ function Home() {
   useEffect(() => {
     <link rel="shortcut icon" type="image/png" href="/LOGO.png" />;
 
-    document.title = `KASA`;
+    document.title = `KASA -> Accueil`;
   });
   return (
     <>

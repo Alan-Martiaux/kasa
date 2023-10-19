@@ -2,8 +2,8 @@ header {
   display: flex;
   justify-content: center;
   .img_logo {
-    height: 68px;
-    width: 210px;
+    max-height: 68px;
+    max-width: 210px;
   }
 
   nav {
@@ -32,4 +32,24 @@ header {
   align-items: center;
   margin-top: 15px;
   padding-bottom: 15px;
+  padding: 20px;
+}
+
+@media (max-width: 576px) {
+  .headerContainer {
+    padding: 20px;
+  }
+
+  header {
+    .img_logo {
+      max-width: 150px;
+      max-height: 46px;
+    }
+    nav {
+      gap: 26px;
+      a {
+        font-size: 12px;
+      }
+    }
+  }
 }
