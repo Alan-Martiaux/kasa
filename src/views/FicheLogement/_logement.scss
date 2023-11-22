@@ -1,0 +1,190 @@
+.ficheLogement {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1240px;
+  border-radius: 25px;
+  gap: 30px;
+  margin: auto;
+  margin-bottom: 50px;
+
+  &__PartOne {
+    display: flex;
+    max-width: 1240px;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__PartTwo {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+
+    .collapse {
+      max-width: 582px;
+      width: 100%;
+    }
+  }
+}
+
+.titleandLocation {
+  color: $mainColor;
+  h1 {
+    font-size: 36px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  .Tag {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    .tag-container {
+      background-color: $mainColor;
+      color: $whiteColor;
+      min-width: 115px;
+      padding: 5px 15px;
+      text-align: center;
+      border-radius: 10px;
+    }
+  }
+}
+
+.hostandRating {
+  gap: 30px;
+
+  .Rating {
+    text-align: right;
+  }
+
+  .host {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 20px;
+
+    p {
+      max-width: 100px;
+      width: 100%;
+      text-align: right;
+      color: $mainColor;
+      text-wrap: wrap;
+    }
+    img {
+      border-radius: 95px;
+      max-width: 64px;
+      width: 100%;
+      max-height: 64px;
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .ficheLogement {
+    &__PartTwo {
+      flex-direction: column;
+      align-content: center;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hostandRating {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row-reverse;
+    padding-top: 25px;
+
+    .Rating {
+      text-align: left;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .ficheLogement {
+    padding: 20px;
+    &__PartOne,
+    &__PartTwo {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  .hostandRating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+
+    .Rating {
+      text-align: left;
+      img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+    .host {
+      gap: 10px;
+      img {
+        max-width: 32px;
+        width: 100%;
+
+        max-height: 32px;
+        height: 100%;
+      }
+      p {
+        font-size: 12px;
+        max-width: 70px;
+        
+      }
+    }
+  }
+
+  .titleandLocation {
+    color: $mainColor;
+    h1 {
+      font-size: 20px;
+    }
+    h3 {
+      font-size: 14px;
+    }
+  }
+
+  .ficheLogement {
+    max-width: 335px;
+
+    &__PartOne {
+      max-width: 335px;
+    }
+
+    .collapse {
+      max-width: 335px;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .titleandLocation {
+    .Tag {
+      justify-content: center;
+    }
+  }
+
+  .hostandRating {
+    flex-direction: column;
+  }
+}

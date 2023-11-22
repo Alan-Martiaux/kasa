@@ -1,0 +1,29 @@
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $graybackground;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1240px;
+  border-radius: 25px;
+  gap: 50px;
+  margin: auto;
+  margin-bottom: 50px;
+  padding: 50px 0px;
+}
+
+@media (max-width: 1024px) {
+  .gallery {
+    margin: 0 30px;
+}}
+
+@media (max-width: 576px) {
+  .gallery {
+    flex-direction: column;
+    background-color: $whiteColor;
+    margin: 0px 20px;
+    padding: 10px 0px;
+  }
+}
