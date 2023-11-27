@@ -6,8 +6,8 @@ import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 const down = <FontAwesomeIcon icon={faChevronDown} />;
 const up = <FontAwesomeIcon icon={faChevronUp} />;
 
-const Collapse = ({ title, content, children }) => {
-  const [openTab, setOpenTab] = useState();
+const Collapse = ({ title, content }) => {
+  const [openTab, setOpenTab] = useState(false);
 
   const openTabHandler = () => {
     setOpenTab((openTab) => !openTab);
@@ -25,12 +25,7 @@ const Collapse = ({ title, content, children }) => {
         )}
       </div>
 
-      {openTab && (
-        <div className="collapse_content">
-          {content}
-          {children}
-        </div>
-      )}
+      {openTab && <div className="collapse_content">{content}</div>}
     </section>
   );
 };
