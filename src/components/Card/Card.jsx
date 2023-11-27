@@ -22,4 +22,3 @@ Card.propTypes = {
 };
 
 export default Card;
-//  <img src={picture} alt="Img Location" />

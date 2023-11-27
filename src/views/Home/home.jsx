@@ -14,7 +14,7 @@ function Home() {
   return (
     <>
       <Banner image={banner_img} text="Chez vous, partout ailleurs" />
-      {/* <div className="centerPages"> */}
+
       <section className="gallery">
         {ArrayLogements.map((location, index) => (
           <Card
@@ -25,11 +25,8 @@ function Home() {
           />
         ))}
       </section>
-      {/* Futrue boucle pour afficher les composant card X fois */}
-      {/* </div> */}
     </>
   );
 }
 
 export default Home;
-//<h1>👷🏼‍♂️ Comming Soon 🏗️ </h1>

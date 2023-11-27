@@ -7,7 +7,7 @@ const down = <FontAwesomeIcon icon={faChevronDown} />;
 const up = <FontAwesomeIcon icon={faChevronUp} />;
 
 const Collapse = ({ title, content, children }) => {
-  const [openTab, setOpenTab] = useState(false);
+  const [openTab, setOpenTab] = useState();
 
   const openTabHandler = () => {
     setOpenTab((openTab) => !openTab);
