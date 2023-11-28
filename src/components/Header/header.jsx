@@ -1,5 +1,5 @@
 import Logo from "../../asset/LOGO.png";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -7,8 +7,19 @@ function Header() {
       <div className="headerContainer">
         <img className="img_logo" src={Logo} alt="LOGO" />
         <nav>
-          <Link to="/">Accueil</Link>
-          <Link to="/propos">A Propos</Link>
+          <NavLink
+            className={({ isActive }) => (isActive ? "active" : "")}
+            to="/"
+          >
+            Accueil
+          </NavLink>
+
+          <NavLink
+            className={({ isActive }) => (isActive ? "active" : "")}
+            to="/propos"
+          >
+            A propos
+          </NavLink>
         </nav>
       </div>
     </header>
