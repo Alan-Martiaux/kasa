@@ -5,7 +5,9 @@ function Header() {
   return (
     <header>
       <div className="headerContainer">
-        <img className="img_logo" src={Logo} alt="LOGO" />
+        <Link to="/">
+          <img className="img_logo" src={Logo} alt="LOGO" />{" "}
+        </Link>
         <nav>
           <NavLink
             className={({ isActive }) => (isActive ? "active" : "")}
