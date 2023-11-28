@@ -1,6 +1,6 @@
-# Projet 11 : KASA
+# Projet 11 : ![Visuel Kasa](./src/asset/LOGO.png)
 
-![Visuel Kasa](./src/asset/banner_Home.png)
+![Visuel Kasa](./src/asset/visuel.png)
 
 ### Contexte
 
