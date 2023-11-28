@@ -5,6 +5,7 @@ import Collapse from "../../components/Collapse/Collapse";
 
 function Propos() {
   document.title = `KASA -> A Propos`;
+
   return (
     <>
       <Banner image={banner_img} text="" />

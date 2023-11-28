@@ -21,6 +21,9 @@ header nav a {
 header nav a:hover {
   text-decoration: underline;
 }
+header .active {
+  text-decoration: underline;
+}
 
 .headerContainer {
   max-width: 1240px;

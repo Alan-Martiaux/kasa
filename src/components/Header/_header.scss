@@ -22,8 +22,10 @@ header {
       text-decoration: underline;
     }
   }
+  .active {
+    text-decoration: underline;
+  }
 }
-
 .headerContainer {
   max-width: 1240px;
   width: 100%;
