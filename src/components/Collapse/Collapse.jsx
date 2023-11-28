@@ -1,10 +1,6 @@
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
-
-const down = <FontAwesomeIcon icon={faChevronDown} />;
-const up = <FontAwesomeIcon icon={faChevronUp} />;
+import up from "../../asset/up.png";
+import down from "../../asset/down.png";
 
 const Collapse = ({ title, content, children }) => {
   const [openTab, setOpenTab] = useState(false);
@@ -19,9 +15,17 @@ const Collapse = ({ title, content, children }) => {
         <h2 className="collapse_header_title">{title}</h2>
 
         {!openTab ? (
-          <i className="collapse_header_icon arrowUp">{up}</i>
+          <img
+            src={up}
+            alt="Flêche UP"
+            className="collapse_header_icon arrowUp"
+          />
         ) : (
-          <i className="collapse_header_icon arrowDown">{down}</i>
+          <img
+            src={down}
+            alt="Flêche down"
+            className="collapse_header_icon arrowDown"
+          />
         )}
       </div>
 

@@ -314,6 +314,10 @@ a {
     font-size: 13px;
     max-height: 30px;
   }
+  .arrowDown,
+  .arrowUp {
+    width: 20px;
+  }
   .collapse_content {
     font-size: 13px;
   }
