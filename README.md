@@ -1,4 +1,4 @@
-# Projet 11 : ![Visuel Kasa](./src/asset/LOGO.png)
+# Projet 11 : KASA
 
 ![Visuel Kasa](./src/asset/visuel.png)
 
